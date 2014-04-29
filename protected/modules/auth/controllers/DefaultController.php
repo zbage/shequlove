@@ -88,6 +88,5 @@ class DefaultController extends CAuthController{
         }
     }
     public function actionTest(){
-        $this->renderPartial('home.php');
     }
 }

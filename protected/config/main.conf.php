@@ -79,7 +79,9 @@ return array(
         ),
     ),
     'modules'=>array(
-        'auth',     //认证
+        'auth'=>array(
+            'useFake'=>TRUE
+        ),     //认证
         'home',     //主页
     ),
 

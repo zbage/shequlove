@@ -1,0 +1,85 @@
+2014/04/29 18:14:10 [error] [exception.CException] exception 'CException' with message 'HomeController 无法找到请求的视图 "/userinfo/".' in /data/php/framework/core/web/CController.php:878
+Stack trace:
+#0 /data/php/framework/core/web/CController.php(782): CController->renderPartial('/userinfo/', Array, true)
+#1 /var/www/jiaoyou/protected/modules/home/controllers/HomeController.php(53): CController->render('/userinfo/', Array)
+#2 [internal function]: HomeController->actionShowinfo('1')
+#3 /data/php/framework/core/web/actions/CAction.php(107): ReflectionMethod->invokeArgs(Object(HomeController), Array)
+#4 /data/php/framework/core/web/actions/CInlineAction.php(48): CAction->runWithParamsInternal(Object(HomeController), Object(ReflectionMethod), Array)
+#5 /data/php/framework/core/web/CController.php(308): CInlineAction->runWithParams(Array)
+#6 /data/php/framework/core/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#7 /data/php/framework/core/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), NULL)
+#8 /data/php/framework/core/web/CWebApplication.php(283): CController->run('showinfo')
+#9 /data/php/framework/core/web/CWebApplication.php(142): CWebApplication->runController('home/home/showi...')
+#10 /data/php/framework/core/CApplication.php(160): CWebApplication->processRequest()
+#11 /var/www/jiaoyou/index.php(18): CApplication->run()
+#12 {main}
+REQUEST_URI=/home/home/showinfo?id=1
+HTTP_REFERER=http://jiaoyou.qq.com/home/home/home
+2014/04/29 18:25:33 [error] [exception.CException] exception 'CException' with message 'HomeController and its behaviors do not have a method or closure named "location".' in /data/php/framework/core/CComponent.php:266
+Stack trace:
+#0 /var/www/jiaoyou/protected/modules/home/controllers/HomeController.php(58): CComponent->__call('location', Array)
+#1 /var/www/jiaoyou/protected/modules/home/controllers/HomeController.php(58): HomeController->location('2')
+#2 [internal function]: HomeController->actionShowinfo('1')
+#3 /data/php/framework/core/web/actions/CAction.php(107): ReflectionMethod->invokeArgs(Object(HomeController), Array)
+#4 /data/php/framework/core/web/actions/CInlineAction.php(48): CAction->runWithParamsInternal(Object(HomeController), Object(ReflectionMethod), Array)
+#5 /data/php/framework/core/web/CController.php(308): CInlineAction->runWithParams(Array)
+#6 /data/php/framework/core/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#7 /data/php/framework/core/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), NULL)
+#8 /data/php/framework/core/web/CWebApplication.php(283): CController->run('showinfo')
+#9 /data/php/framework/core/web/CWebApplication.php(142): CWebApplication->runController('home/home/showi...')
+#10 /data/php/framework/core/CApplication.php(160): CWebApplication->processRequest()
+#11 /var/www/jiaoyou/index.php(18): CApplication->run()
+#12 {main}
+REQUEST_URI=/home/home/showinfo?id=1
+HTTP_REFERER=http://jiaoyou.qq.com/home/home/home
+2014/04/29 18:25:57 [error] [exception.CException] exception 'CException' with message 'HomeController and its behaviors do not have a method or closure named "location".' in /data/php/framework/core/CComponent.php:266
+Stack trace:
+#0 /var/www/jiaoyou/protected/modules/home/controllers/HomeController.php(58): CComponent->__call('location', Array)
+#1 /var/www/jiaoyou/protected/modules/home/controllers/HomeController.php(58): HomeController->location('2')
+#2 [internal function]: HomeController->actionShowinfo('1')
+#3 /data/php/framework/core/web/actions/CAction.php(107): ReflectionMethod->invokeArgs(Object(HomeController), Array)
+#4 /data/php/framework/core/web/actions/CInlineAction.php(48): CAction->runWithParamsInternal(Object(HomeController), Object(ReflectionMethod), Array)
+#5 /data/php/framework/core/web/CController.php(308): CInlineAction->runWithParams(Array)
+#6 /data/php/framework/core/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#7 /data/php/framework/core/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), NULL)
+#8 /data/php/framework/core/web/CWebApplication.php(283): CController->run('showinfo')
+#9 /data/php/framework/core/web/CWebApplication.php(142): CWebApplication->runController('home/home/showi...')
+#10 /data/php/framework/core/CApplication.php(160): CWebApplication->processRequest()
+#11 /var/www/jiaoyou/index.php(18): CApplication->run()
+#12 {main}
+REQUEST_URI=/home/home/showinfo?id=1
+HTTP_REFERER=http://jiaoyou.qq.com/home/home/home
+2014/04/29 18:25:57 [error] [exception.CException] exception 'CException' with message 'HomeController and its behaviors do not have a method or closure named "location".' in /data/php/framework/core/CComponent.php:266
+Stack trace:
+#0 /var/www/jiaoyou/protected/modules/home/controllers/HomeController.php(58): CComponent->__call('location', Array)
+#1 /var/www/jiaoyou/protected/modules/home/controllers/HomeController.php(58): HomeController->location('2')
+#2 [internal function]: HomeController->actionShowinfo('1')
+#3 /data/php/framework/core/web/actions/CAction.php(107): ReflectionMethod->invokeArgs(Object(HomeController), Array)
+#4 /data/php/framework/core/web/actions/CInlineAction.php(48): CAction->runWithParamsInternal(Object(HomeController), Object(ReflectionMethod), Array)
+#5 /data/php/framework/core/web/CController.php(308): CInlineAction->runWithParams(Array)
+#6 /data/php/framework/core/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#7 /data/php/framework/core/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), NULL)
+#8 /data/php/framework/core/web/CWebApplication.php(283): CController->run('showinfo')
+#9 /data/php/framework/core/web/CWebApplication.php(142): CWebApplication->runController('home/home/showi...')
+#10 /data/php/framework/core/CApplication.php(160): CWebApplication->processRequest()
+#11 /var/www/jiaoyou/index.php(18): CApplication->run()
+#12 {main}
+REQUEST_URI=/home/home/showinfo?id=1
+HTTP_REFERER=http://jiaoyou.qq.com/home/home/home
+2014/04/29 18:26:21 [error] [exception.CException] exception 'CException' with message 'HomeController and its behaviors do not have a method or closure named "location".' in /data/php/framework/core/CComponent.php:266
+Stack trace:
+#0 /var/www/jiaoyou/protected/modules/home/controllers/HomeController.php(58): CComponent->__call('location', Array)
+#1 /var/www/jiaoyou/protected/modules/home/controllers/HomeController.php(58): HomeController->location('2')
+#2 [internal function]: HomeController->actionShowinfo('1')
+#3 /data/php/framework/core/web/actions/CAction.php(107): ReflectionMethod->invokeArgs(Object(HomeController), Array)
+#4 /data/php/framework/core/web/actions/CInlineAction.php(48): CAction->runWithParamsInternal(Object(HomeController), Object(ReflectionMethod), Array)
+#5 /data/php/framework/core/web/CController.php(308): CInlineAction->runWithParams(Array)
+#6 /data/php/framework/core/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#7 /data/php/framework/core/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), NULL)
+#8 /data/php/framework/core/web/CWebApplication.php(283): CController->run('showinfo')
+#9 /data/php/framework/core/web/CWebApplication.php(142): CWebApplication->runController('home/home/showi...')
+#10 /data/php/framework/core/CApplication.php(160): CWebApplication->processRequest()
+#11 /var/www/jiaoyou/index.php(18): CApplication->run()
+#12 {main}
+REQUEST_URI=/home/home/showinfo?id=1
+HTTP_REFERER=http://jiaoyou.qq.com/home/home/home

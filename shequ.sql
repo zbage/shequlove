@@ -31,6 +31,7 @@ create table love_userinfo(
   id int(10) not null auto_increment primary key,
   openid varchar(30) not null,
   valid  int(1) not null default 0,
+  photo varchar(35),
   nickname varchar(30) not null,
   location int(2) not null,
   age int(2) ,
@@ -44,18 +45,25 @@ create table love_userinfo(
   request varchar(400) not null,
   qqnum int(14),
   wxusername varchar(20) not null,
-  phone int(11)
+  phone int(11),
+  bewatch int(10) not null default 0
 )engine=innoDB default charset=utf8; 
 
 
+
+
 drop table if exists love_userconcern;
-create table love_userattention(
-id int(10) not null auto_increment primary key,
-qqnum int(14) not null,
-concern text not null comment '关注的人',
-friend text not null comment '相互关注成为朋友的人',
-concern_num int(10),
-beconcerned_num int(10),
-no_concern_message text not null comment '被关注，但是未添加朋友的信息id',
-be_watched int(10) comment '被查看次数'
-);
+create table love_userconcern(
+  id int(20) not null auto_increment primary key,
+  uid int(10) not null comment "关注用户的ｉｄ",
+  uuid int(10) not null comment "被关注用户的ｉｄ",
+)engine=innoDB default charset=utf8;
+
+
+drop table if exists love_usermess;
+create table love_usermess(
+ id int(20) not null auto_increment primary key,
+ mess varchar(100),
+ checked int(1) comment "信息是否已被查看"
+)engine=innoDB default charset=utf8;
+

@@ -1,0 +1,43 @@
+.userblock{
+    width: 33%;
+    float: left;
+}
+.touxiang{
+    width: 100%;
+    height: 200px;
+}
+
+#header{
+    width: 100%;
+    height: 30px;
+    background: #0000ff;
+}
+.header_unit{
+    float: left;
+    width: 25%;
+    height: 30px;
+    background: red;
+    margin-right: 10px;
+    text-align: center;
+    line-height: 30px;
+}
+#header_home{
+    float: left;
+    width: 10%;
+    background: #000000;
+    color: #ffffff;
+}
+#sex{
+    width: 100%;
+    height: 30px;
+    background: yellow;
+}
+.sex_unit{
+    float: left;
+    width: 25%;
+    height: 30px;
+    background: blue;
+    margin-right: 10px;
+    text-align: center;
+    line-height: 30px;
+}

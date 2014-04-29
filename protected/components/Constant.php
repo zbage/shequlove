@@ -9,4 +9,7 @@
 //定第头像保存路径
 define("PIC_SAVE_PATH",ROOT_DIR.'/assets/tmppic/');
 define("PIC_SAVE_RELATIVE_PATH",'/assets/tmppic/');
+
 define('SERVER_URL','http://'.$_SERVER['SERVER_NAME']);
+
+define('HOME_CSS','/assets/css/home.css');

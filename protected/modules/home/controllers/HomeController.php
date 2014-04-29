@@ -28,7 +28,7 @@ class HomeController extends CHomeController{
         foreach($data as $k){
             $request=array(
                 'tablename'=>'Userinfo',
-                'select'=>"nickname,age,location,sex,photo",
+                'select'=>$this->userinfoModel->permission(1),
                 'condition'=>'openid='.$k['openid'],
             );
             $usersBasicInfo[]=$this->getData($request);
@@ -36,8 +36,26 @@ class HomeController extends CHomeController{
         return $usersBasicInfo;
     }
 
-    public function actionTest(){
-        $this->render('aaa');
+    private function getUserGeneralinfo($id,$permission=2){
+        $request=array(
+            'tablename'=>'userinfo',
+            'select'=>$this->userinfoModel->permission($permission),
+            'condition'=>'id='.$id
+        );
+        return $this->getData($request);
     }
 
+    public function actionShowinfo($id){
+        $userinfo=$this->getUserGeneralinfo($id);
+        /*
+         * 这路查看用户是否关注
+         */
+        foreach($userinfo as $k=>$v){
+            if(!is_null($v)){
+                    $userdata[$k]=$v;
+            }
+        }
+        
+        $this->renderPartial('userinfo',array('userinfoModel'=>$this->userinfoModel,'userinfo'=>$userinfo));
+    }
 }

@@ -65,4 +65,21 @@ class UserinfoModel {
             2=>'未购房'
         );
     }
+
+    public function permission($num){
+        switch($num){
+            case 1:
+                return "id,nickname,age,location,sex,photo";
+                break;
+            case 2:
+                return "id,nickname,age,location,sex,photo,height,profession,introduce,request";
+                break;
+            case 3:
+                return "id,nickname,age,location,sex,photo,height,profession,introduce,request,income,education,house";
+                break;
+            case 4:
+                return "id,nickname,age,location,sex,photo,height,profession,introduce,request,income,education,house,qqnum,wxusername,phone";
+        }
+
+    }
 } 

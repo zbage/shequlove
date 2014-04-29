@@ -8,8 +8,11 @@
 
 class CHomeController  extends CController{
     public $layout='//layouts/home';
+    public $userinfoModel;
 
     public function filters(){
+        $this->userinfoModel=new UserinfoModel();
+
         $oid=is_null($_COOKIE['openid'])?"wrong":$_COOKIE['openid'];
         if(!QQ::isValidUser()){
             $this->redirect('/auth/default/index?oid='.$oid);
