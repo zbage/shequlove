@@ -82,4 +82,84 @@ class UserinfoModel {
         }
 
     }
-} 
+
+    public function chval($key,$val){
+        switch($key){
+            case 'location':
+                $res=$this->city();
+                return $res[$val];
+                break;
+            case 'sex':
+                $res=$this->sex();
+                return $res[$val];
+                break;
+            case 'income':
+                $res=$this->income();
+                return $res[$val];
+                break;
+            case 'education':
+                $res=$this->education();
+                return $res[$val];
+                break;
+            case 'house':
+                $res=$this->house();
+                return $res[$val];
+                break;
+            default:
+                return $val;
+        }
+    }
+
+    public static function chkey($key){
+        $chk=array(
+            'nickname'=>'昵称',
+            'location'=>'出没地带',
+            'age'=>'年龄',
+            'sex'=>'性别',
+            'height'=>'身高',
+            'profession'=>'职业',
+            'income'=>'月收入',
+            'education'=>'受教育程度',
+            'house'=>'购房情况',
+            'introduce'=>'自我介绍',
+            'request'=>'交友要求',
+            'qqnum'=>'QQ号码',
+            'wxusername'=>'微信帐号',
+            'phone'=>'电话号码'
+        );
+        if(is_null($chk[$key])){
+            return null;
+        }
+        return $chk[$key];
+    }
+
+    public function bewatch($id){
+        $userinfo=Userinfo::model()->find(array(
+            'select'=>'bewatch',
+            'condition'=>"id=".$id,
+        ));
+        $num=$userinfo->bewatch+1;
+        return $rows=Userinfo::model()->updateAll(array('bewatch'=>$num),'id='.$id);
+    }
+
+    public function beconcerned($id){
+        $userinfo=Userinfo::model()->find(array(
+            'select'=>'beconcerned',
+            'condition'=>"id=".$id,
+        ));
+        $num=$userinfo->beconcerned+1;
+        return $rows=Userinfo::model()->updateAll(array('beconcerned'=>$num),'id='.$id);
+    }
+
+    public static function lastlogin($qqnum){
+        return $rows=Userinfo::model()->updateAll(array('lastlogintime'=>time()),'qqnum='.$qqnum);
+    }
+
+    public function findQQbyId($id){
+        $userinfo=Userinfo::model()->find(array(
+            'select'=>'qqnum',
+            'condition'=>'id='.$id
+        ));
+        return $userinfo['qqnum'];
+    }
+}

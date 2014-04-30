@@ -22,7 +22,6 @@ create table love_userdata(
   id int(10) not null auto_increment primary key,
   openid varchar(30) not null,
   createtime int(10) not null,
-  lastlogintime int(10) not null
 )engine=innoDB default charset=utf8;
 
 
@@ -47,6 +46,7 @@ create table love_userinfo(
   wxusername varchar(20) not null,
   phone int(11),
   bewatch int(10) not null default 0
+  lastlogintime int(10) not null
 )engine=innoDB default charset=utf8; 
 
 

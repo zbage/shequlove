@@ -23,8 +23,10 @@ class RankAction {
                 return $this->lastLogin($offset);
                 break;
             case 'beConcerned':
+                return $this->beConcerned($offset);
                 break;
             case 'beWatch':
+                return $this->beWatch($offset);
                 break;
             default:
                 return "rankAction wrong";
@@ -38,10 +40,30 @@ class RankAction {
         return $data;
     }
 
+    private function beWatch($offset){
+        $request=array(
+            'tablename'=>'userinfo',
+            'select'=>'qqnum',
+            'order'=>'bewatch',
+            'limit'=>$offset.",".$this->pageUserNum
+        );
+        return $this->getData($request);
+    }
+
+    private function beConcerned($offset){
+        $request=array(
+            'tablename'=>'Userinfo',
+            'select'=>'qqnum',
+            'order'=>'beconcerned DESC',
+            'limit'=>$offset.",".$this->pageUserNum
+        );
+        return $this->getData($request);
+    }
+
     private function lastLogin($offset){
         $request=array(
-            'tablename'=>'Userdata',
-            'select'=>'openid',
+            'tablename'=>'Userinfo',
+            'select'=>'qqnum',
             'order'=>'lastlogintime DESC',
             'limit'=>"$offset".","."$this->pageUserNum"
         );

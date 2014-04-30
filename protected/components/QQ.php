@@ -19,4 +19,5 @@ class QQ{
             return false;
         }
     }
+
 }

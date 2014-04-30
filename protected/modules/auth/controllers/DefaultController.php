@@ -29,7 +29,9 @@ class DefaultController extends CAuthController{
             $Co->setCookie('openid',$this->openId);
             $this->redirect('/auth/default/qqlogin');
         }else{
-            print_r($_COOKIE);
+            //这里面我用了qq号码，暂时，以后需要修改
+            UserinfoModel::lastlogin($_COOKIE['uin']);
+            $this->redirect('/home/home/home');
         }
     }
 
@@ -88,5 +90,6 @@ class DefaultController extends CAuthController{
         }
     }
     public function actionTest(){
+    echo time();
     }
 }

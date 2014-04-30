@@ -12,4 +12,11 @@ define("PIC_SAVE_RELATIVE_PATH",'/assets/tmppic/');
 
 define('SERVER_URL','http://'.$_SERVER['SERVER_NAME']);
 
+//home下的css路径
 define('HOME_CSS','/assets/css/home.css');
+
+//本地jquery
+define('LOCAL_JQUERY','/assets/js/jquery-1.11.0.js');
+
+//本地home下的js
+define('LOCAL_HOME_JS','/assets/js/homeRank.js');
